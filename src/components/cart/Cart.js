@@ -95,7 +95,7 @@ class Cart extends Component {
                         <th style={{width: "10%"}}></th>
                     </tr>
                     </thead>
-                    <tbody className={this.props.productHide}>
+                    <tbody>
                     {productsRender}
                     </tbody>
                     <tfoot>

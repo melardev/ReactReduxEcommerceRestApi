@@ -7,12 +7,12 @@ class Pagination extends React.Component {
 
     renderLastPaginationButton() {
         // Render only if we are 2 pages before
-        if (this.props.pageMeta.current_page_number < this.props.pageMeta.total_pages_count - 2) {
+        if (this.props.pageMeta.current_page_number < this.props.pageMeta.number_of_pages - 2) {
 
             return (
                 <li className="page-item" data-toggle="tooltip" data-placement="top" title="Go to last page">
                     <a className="page-link"
-                       onClick={e => this.props.loadMore(this.props.location.pathname, this.props.pageMeta.total_pages_count, this.props.pageMeta.requested_page_size)}>
+                       onClick={e => this.props.loadMore(this.props.location.pathname, this.props.pageMeta.number_of_pages, this.props.pageMeta.requested_page_size)}>
                         <span aria-hidden="true">&raquo;</span>
                         <span className="sr-only"> {this.props.pageMeta.total_page_count}</span>
                     </a>

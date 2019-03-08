@@ -5,7 +5,7 @@ class Footer extends React.Component {
         return (
             <footer className="footer text-center">
                 <div className="container">
-                    <span className="text-muted">&copy; 2019 - React-Redux Crud by Melardev</span>&nbsp;
+                    <span className="text-muted">&copy; 2019 - React-Redux Ecommerce by Melardev</span>&nbsp;
                     <a target="_blank" rel="noopener noreferrer" href="https://youtube.com/melardev"
                        className="btn btn-social-icon btn-google-plus">
                         <i className="fa fa-youtube"/>
