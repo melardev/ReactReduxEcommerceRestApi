@@ -1,3 +1,23 @@
+- [Introduction](#introduction)
+- [Full-stack Applications](#full-stack-applications)
+  * [E-commerce (shopping cart)](#e-commerce--shopping-cart-)
+    + [Server side implementations](#server-side-implementations)
+    + [Client side implementations](#client-side-implementations)
+  * [Blog/CMS](#blog-cms)
+    + [Server side implementations](#server-side-implementations-1)
+    + [Client side](#client-side)
+      - [The next come are](#the-next-come-are)
+  * [Simple CRUD(Create, Read, Update, Delete)](#simple-crud-create--read--update--delete-)
+    + [Server side implementations](#server-side-implementations-2)
+    + [Client side implementations](#client-side-implementations-1)
+      - [The next come are](#the-next-come-are-1)
+  * [CRUD + Pagination](#crud---pagination)
+    + [Server side implementations](#server-side-implementations-3)
+      - [The next come are](#the-next-come-are-2)
+    + [Client side implementations](#client-side-implementations-2)
+      - [The next come are](#the-next-come-are-3)
+- [TODO](#todo)
+
 # Introduction
 This shopping cart application is built using React + Redux, it is supposed to work with any of these servers listed below. **Be warned** that
 while making this app I am using this [Spring Boot Server](https://github.com/melardev/SBootApiEcomMVCHibernate) so I strongly encourage you
