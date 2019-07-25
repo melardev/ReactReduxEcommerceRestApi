@@ -18,7 +18,11 @@ export const ProductAxiosService = {
             comment: {body: payload}
         });
     },
-
+    createProduct(formData) {
+        return AxiosService.post(`products`, formData, {
+            headers: {'Content-Type': 'multipart/form-data'}
+        });
+    },
     delete(slug, commentId) {
         return AxiosService.delete(`articles/${slug}/comments/${commentId}`);
     }

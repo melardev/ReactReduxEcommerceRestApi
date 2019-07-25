@@ -3,6 +3,7 @@ import {NavLink} from 'react-router-dom'
 import {ProductActionCreator} from "../../actions/products.actions";
 import {connect} from "react-redux";
 import {CartActionCreator} from "../../actions/cart.actions";
+import {getApiUrl} from "../../utils/url_util";
 
 
 class ProductDetails extends Component {
@@ -23,7 +24,6 @@ class ProductDetails extends Component {
     componentDidMount() {
         this.props.fetchProduct(this.props.match.params.slug);
     }
-
 
     productAdd() {
         this.props.addProductToCart(this.props.product, parseInt(this.state.quantity));
@@ -60,15 +60,17 @@ class ProductDetails extends Component {
             return (
                 <div className="container" style={{marginTop: "100px", marginBottom: "100px"}}>
                     <div className="row">
+                        {this.props.product.image_urls instanceof Array &&
+                        this.props.product.image_urls.length > 0 &&
                         <div className="col-md-6">
-                            <img className="card-img-top" src={this.props.product.image_urls[0]} alt=""/>
-                        </div>
+                            <img className="card-img-top" src={getApiUrl(this.props.product.image_urls[0])} alt=""/>
+                        </div>}
 
                         <div className="col-md-6">
                             <hr/>
                             <h3>{this.props.product.name}</h3>
                             <hr/>
-                            <p>{this.props.product.description}</p>
+                            <p dangerouslySetInnerHTML={{__html: this.props.product.description}}/>
                             <hr/>
                             <strong>Quantity</strong>
                             <input className="form-control col-md-2" type="number" name="quantity"

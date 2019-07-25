@@ -6,7 +6,8 @@ const INITIAL_STATE = {
         page_meta: {},
         products: []
     },
-    selected_product: {}
+    selected_product: {},
+    product_created: false
 };
 export const ProductReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
@@ -18,6 +19,15 @@ export const ProductReducer = (state = INITIAL_STATE, action) => {
             return {...state, loading: true};
         case ProductAction.FETCH_PRODUCT_SUCCESS:
             return {...state, loading: false, selected_product: action.product};
+        case ProductAction.CREATED_PRODUCT_SUCCESS:
+            const newProductsData = {...state.products_data};
+            newProductsData.products.push(action.product);
+            return {
+                ...state, loading: false, product_created: true,
+                products_data: newProductsData
+            };
+        case ProductAction.CLEAR_PRODUCT_CREATED:
+            return {...state, product_created: false};
         default:
             return state;
     }

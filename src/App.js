@@ -17,6 +17,7 @@ import Checkout from "./components/orders/Checkout";
 import Profile from "./components/users/Profile";
 
 import Notifications from "./components/partials/Notifications";
+import ProductCreate from "./components/products/ProductCreate";
 
 class App extends Component {
     render() {
@@ -32,6 +33,7 @@ class App extends Component {
 
                         {/* Product routes */}
                         <Route path='/products' component={ProductList} exact={true}/>
+                        <Route exact path='/products/new' component={ProductCreate}/>
                         <Route path='/products/:slug' component={ProductDetails}/>
 
                         {/* Product routes */}

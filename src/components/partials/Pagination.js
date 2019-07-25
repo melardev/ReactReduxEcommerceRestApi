@@ -14,7 +14,7 @@ class Pagination extends React.Component {
                     <a className="page-link"
                        onClick={e => this.props.loadMore(this.props.location.pathname, this.props.pageMeta.number_of_pages, this.props.pageMeta.requested_page_size)}>
                         <span aria-hidden="true">&raquo;</span>
-                        <span className="sr-only"> {this.props.pageMeta.total_page_count}</span>
+                        <span className="sr-only"> {this.props.pageMeta.number_of_pages}</span>
                     </a>
                 </li>
             );
@@ -75,7 +75,7 @@ class Pagination extends React.Component {
                             {this.props.pageMeta.has_next_page &&
                             <li className="page-item">
                                 <a className="page-link"
-                                   onClick={e => this.props.loadMore(this.props.location.pathname, this.props.pageMeta.next_page_number, this.props.pageMeta.request_page_size)}>
+                                   onClick={e => this.props.loadMore(this.props.location.pathname, this.props.pageMeta.next_page_number, this.props.pageMeta.requested_page_size)}>
                                     {this.props.pageMeta.next_page_number}
                                 </a>
                             </li>}

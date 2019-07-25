@@ -26,11 +26,11 @@ class Header extends React.Component {
         return (
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
                 <div className="container">
-                    <NavLink className="navbar-brand" to="/">React + Redux Ecommerce App</NavLink>
+                    <NavLink className="navbar-brand" to="/">React + Redux E-commerce App</NavLink>
                     <button className="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarResponsive"
                             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
+                        <span className="navbar-toggler-icon"/>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarResponsive">
                         <ul className="navbar-nav ml-auto">
@@ -41,6 +41,10 @@ class Header extends React.Component {
                             <li className="nav-item">
                                 <NavLink className="nav-link" to="/products"
                                          activeStyle={{color: 'white'}}>Products</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link" to="/products/new"
+                                         activeStyle={{color: 'white'}}>Create Product</NavLink>
                             </li>
                             <li className="nav-item">
                                 <NavLink className="nav-link" to="/cart" activeStyle={{color: 'white'}}>Cart</NavLink>

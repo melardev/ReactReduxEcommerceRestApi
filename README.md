@@ -139,3 +139,7 @@ This client side E-commerce application is also implemented using other client s
 # TODO
 - After login or register redirect where the user was
 - Guards
+- Pagination Does not work as expected
+- Disallow non-admin users creating products
+- Edit Products
+- Product Details should show a gallery of images and not only one image
